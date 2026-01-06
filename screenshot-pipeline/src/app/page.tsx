@@ -1,30 +1,24 @@
 export default function Home() {
     return (
-        <main style={{
-            minHeight: "100vh",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            background: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)",
-            fontFamily: "Arial, sans-serif",
-            textAlign: "center"
-        }}>
-            <h1 style={{
-                fontSize: "3rem",
-                color: "#333",
-                marginBottom: "1rem"
-            }}>
-                Page de test 🌟
+        <main className="page-container">
+            <h1 className="page-title">
+                Page de test Formulaire 🌟
             </h1>
 
-            <p style={{
-                fontSize: "1.2rem",
-                color: "#555",
-                maxWidth: "400px"
-            }}>
-                Ceci est une jolie petite page pour tester ton application Next.js.
-            </p>
+            <p className="form-section">Bienvenue sur notre page de test ! Vous pouvez utiliser ce formulaire pour prendre des captures d'écran de sites web.</p>
+            
+            <form action="/api/route" method="post" className="form-container">
+                <label htmlFor="url" className="form-label">URL du site à capturer :</label>
+                <input 
+                    type="url" 
+                    id="url" 
+                    name="url" 
+                    required 
+                    placeholder="https://exemple.com"
+                    className="form-input"
+                />
+                <button type="submit" className="submit-btn">📸 Prendre la capture</button>
+            </form>
         </main>
     )
 }
