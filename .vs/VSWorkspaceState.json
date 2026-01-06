@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\screenshot-pipeline",
+    "\\screenshot-pipeline\\.github",
+    "\\screenshot-pipeline\\.github\\workflows",
+    "\\screenshot-pipeline\\src",
+    "\\screenshot-pipeline\\src\\app",
+    "\\screenshot-pipeline\\src\\pages",
+    "\\screenshot-pipeline\\src\\__tests__",
+    "\\screenshot-pipeline\\src\\__tests__\\e2e",
+    "\\screenshot-pipeline\\src\\__tests__\\unit"
+  ],
+  "PreviewInSolutionExplorer": false
+}
