@@ -29,13 +29,13 @@ describe('Vérification de la Page d\'accueil', () => {
     beforeAll(async () => {
         const serverUrl = 'http://127.0.0.1:3000';
 
-        // 1. Vérification du serveur
+        //  Vérification du serveur
         const isUp = await waitForServer(serverUrl);
         if (!isUp) {
             throw new Error("ERREUR : Lance 'npm run dev' dans un terminal séparé avant de tester.");
         }
 
-        // 2. Tuer les processus Chrome existants et nettoyer le profil
+        // Tuer les processus Chrome existants et nettoyer le profil
         try {
             execSync('taskkill /f /t /im chrome.exe', { stdio: 'pipe' });
         } catch (error) {
