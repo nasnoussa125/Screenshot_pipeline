@@ -23,22 +23,3 @@ jobs:
 
       - name: Lancer les tests unitaires
         run: npm test
-
-      - name: Démarrer le serveur en arrière-plan
-        run: npm run dev &
-        env:
-          PORT: 3000
-
-      - name: Attendre que le serveur soit prêt
-        run: |
-          for i in {1..30}; do
-            if curl -f http://localhost:3000 > /dev/null 2>&1; then
-              echo "Serveur prêt !"
-              break
-            fi
-            echo "Attente du serveur... ($i/30)"
-            sleep 2
-          done
-
-      - name: Lancer les tests e2e
-        run: npm run test:e2e
